@@ -21,13 +21,13 @@ This Chrome extension allows you to apply a grayscale filter to specific website
 5. In the top right corner, enable "Developer mode" by clicking the toggle switch.
 
 
-   ![Developer Mode](tutorial/developer-mode.png)
+   ![Load Unpacked](tutorial/load-unpacked.png)
 
 
 6. Click on "Load unpacked" in the top left corner.
 
 
-   ![Load Unpacked](tutorial/load-unpacked.png)
+   ![Developer Mode](tutorial/developer-mode.png)
 
 
 7. Navigate to the folder where you unzipped the extension files and select it.
@@ -38,11 +38,6 @@ This Chrome extension allows you to apply a grayscale filter to specific website
 1. Click on the extension icon in your Chrome toolbar.
 2. In the popup, enter the domain of a website you want to apply the grayscale filter to (e.g., "example.com").
 3. Click "Add" to add the website to your list.
-<<<<<<< HEAD
-
-   ![Add Website](tutorial/add-website.png)
-=======
->>>>>>> 0e1ba4854cbaf07610ffaead6020d64a0bbbb037
 4. Visit the website you added, and it should now appear in grayscale.
 
 
