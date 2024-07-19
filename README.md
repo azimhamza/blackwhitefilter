@@ -1,7 +1,7 @@
 # Black and White Filter Chrome Extension
 
 This Chrome extension allows you to apply a grayscale filter to specific websites of your choice.
-Studies show that turning your devices grayscaling helps [cut down usage.](https://www.tandfonline.com/doi/abs/10.1080/03623319.2020.1737461) But Some website needs color.    
+Studies show that turning your devices grayscaling helps [cut down usage.](https://www.tandfonline.com/doi/abs/10.1080/03623319.2020.1737461) But some websites needs color.    
 
 
 ![Extension Icon](icon128.png)
