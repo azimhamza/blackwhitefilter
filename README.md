@@ -21,13 +21,13 @@ This Chrome extension allows you to apply a grayscale filter to specific website
 5. In the top right corner, enable "Developer mode" by clicking the toggle switch.
 
 
-   ![Developer Mode](tutorial/developer-mode.png)
+   ![Load Unpacked](tutorial/load-unpacked.png)
 
 
 6. Click on "Load unpacked" in the top left corner.
 
 
-   ![Load Unpacked](tutorial/load-unpacked.png)
+   ![Developer Mode](tutorial/developer-mode.png)
 
 
 7. Navigate to the folder where you unzipped the extension files and select it.
