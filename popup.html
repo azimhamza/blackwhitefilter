@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 200px;
+      font-family: Arial, sans-serif;
+    }
+    input {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 94%;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .remove {
+      background: none;
+      border: none;
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<h1>Black and White Filter.</h1>
+<h6>Distracted? GreyScale it to make it <a href="https://x.com/azimhamxa" target="_blank">Boring.</a></h6>
+<h3>Add Website</h3>
+<input type="text" id="website" placeholder="example.com">
+<button id="addButton">Add</button>
+<h3>Websites</h3>
+<ul id="websiteList"></ul>
+<script src="popup.js"></script>
+</body>
+</html>
