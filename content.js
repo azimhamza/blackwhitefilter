@@ -9,11 +9,11 @@ try {
                     return;
                 }
                 const websites = data.websites || [];
-                const currentHostname = window.location.hostname.replace(/^www\./, '');
-                console.log("Current hostname:", currentHostname);
+                const currentUrl = window.location.href;
+                console.log("Current URL:", currentUrl);
                 console.log("Websites list:", websites);
 
-                if (websites.some(site => currentHostname.includes(site))) {
+                if (shouldApplyFilter(currentUrl, websites)) {
                     console.log("Applying filter");
                     if (!filterApplied) {
                         addFilterStyles();
@@ -25,6 +25,14 @@ try {
                 }
             });
         }, 500); // 500ms delay
+    }
+
+    function shouldApplyFilter(url, websiteList) {
+        const currentHostname = new URL(url).hostname.replace(/^www\./, '');
+        return websiteList.some(site => {
+            const siteHostname = site.replace(/^www\./, '');
+            return currentHostname === siteHostname || currentHostname.endsWith(`.${siteHostname}`);
+        });
     }
 
     function addFilterStyles() {
