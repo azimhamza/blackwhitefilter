@@ -26,6 +26,7 @@ This Chrome extension allows you to apply a grayscale filter to specific website
 1. Click on the extension icon in your Chrome toolbar.
 2. In the popup, enter the domain of a website you want to apply the grayscale filter to (e.g., "example.com").
 3. Click "Add" to add the website to your list.
+
    ![Add Website](tutorial/add-website.png)
 4. Visit the website you added, and it should now appear in grayscale.
    ![Grayscale Example](tutorial/grayscale-example.png)
