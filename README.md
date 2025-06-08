@@ -1,92 +1,107 @@
-# Black and White Filter Chrome Extension
+# Focus Tree Browser Extension
 
-This Chrome extension allows you to apply a grayscale filter to specific websites of your choice.
+A productivity browser extension that combines website blocking with gamified focus sessions. Block distracting websites with a grayscale filter and grow a beautiful animated tree during focus sessions!
 
+## Features
 
-![Extension Icon](icon128.png)
+### 🌐 Website Filter
+- **Grayscale Filter**: Automatically applies a black and white filter to specified websites to make them boring and less distracting
+- **Easy Management**: Simple interface to add and remove websites from your block list
+- **Smart Matching**: Automatically handles www prefixes and subdomains
 
-## For Non-Developers
+### 🌱 Focus Tree Timer
+- **Animated Tree Growth**: Watch a beautiful tree grow as you stay focused during timed sessions
+- **Gamified Focus**: Set custom timer durations (minutes and seconds) for your focus sessions
+- **Visual Feedback**: See your progress with real-time timer display and tree animations
+- **Consequence System**: If you give up or visit blocked sites, your tree dies with a dramatic animation
+- **Overlay Blocking**: When you visit blocked sites during active sessions, see a full-screen overlay with:
+  - Live timer countdown
+  - Animated growing tree
+  - Option to give up (and kill the tree)
+  - Motivational messaging
 
-### Installation
+## How It Works
 
-1. Visit the GitHub repository page for this extension.
-2. Click on the green "Code" button, then select "Download ZIP".
+1. **Set Up Blocked Sites**: Use the "Website Filter" tab to add distracting websites
+2. **Start Focus Session**: Switch to "Focus Tree" tab, set your desired time, and click "Start Focus"
+3. **Watch Your Tree Grow**: The tree begins growing with beautiful animations
+4. **Stay Focused**: If you visit blocked sites, you'll see the overlay with your progress
+5. **Complete or Give Up**: Either complete the session successfully or give up (killing your tree)
 
+## Installation
 
-   ![Download ZIP](tutorial/download-zip.png)
+1. Download or clone this repository
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the extension directory
+5. The Focus Tree extension will appear in your browser toolbar
 
+## Usage
 
-3. Once downloaded, unzip the file to a location you can easily find.
-4. Open Google Chrome and go to `chrome://extensions/`.
-5. In the top right corner, enable "Developer mode" by clicking the toggle switch.
+### Adding Websites to Block
+1. Click the Focus Tree extension icon
+2. Go to the "Website Filter" tab
+3. Enter a website URL (e.g., `facebook.com`, `twitter.com`)
+4. Click "Add Website"
+5. The site will now appear grayscale and trigger the timer overlay during focus sessions
 
+### Starting a Focus Session
+1. Click the Focus Tree extension icon
+2. Go to the "Focus Tree" tab
+3. Set your desired time (default is 25 minutes)
+4. Click "Start Focus" to begin
+5. Watch your tree grow and stay away from blocked sites!
 
-   ![Load Unpacked](tutorial/load-unpacked.png)
+### During a Focus Session
+- **Blocked Sites**: Will show a full-screen overlay with timer and tree
+- **Timer Display**: Shows remaining time in MM:SS format
+- **Give Up Option**: Red button to end session early (kills the tree)
+- **Automatic Completion**: Tree fully grows when timer reaches zero
 
+## Technical Details
 
-6. Click on "Load unpacked" in the top left corner.
+- **Manifest Version**: 3
+- **Permissions**: `activeTab`, `storage`, `tabs`
+- **Host Permissions**: `<all_urls>` (required for content script injection)
+- **Storage**: Uses Chrome sync storage for websites and local storage for timer state
+- **Background Script**: Handles cross-tab communication and timer persistence
 
+## Files Structure
 
-   ![Developer Mode](tutorial/developer-mode.png)
+- `manifest.json` - Extension configuration
+- `popup.html` - Extension popup interface with tabs
+- `popup.js` - Popup logic for both website management and timer
+- `content.js` - Content script for filters and timer overlays  
+- `background.js` - Background script for cross-tab communication
+- `icon16.png`, `icon48.png`, `icon128.png` - Extension icons
 
+## Animations
 
-7. Navigate to the folder where you unzipped the extension files and select it.
-8. The extension should now appear in your Chrome browser.
+The extension features several beautiful CSS animations:
 
-### Usage
+- **Tree Growing**: Smooth triangular tree growth animation
+- **Tree Dying**: Dramatic tree death animation with color changes
+- **Pulse Effect**: Subtle pulsing animation for active trees
+- **UI Transitions**: Smooth button and tab transitions
 
-1. Click on the extension icon in your Chrome toolbar.
-2. In the popup, enter the domain of a website you want to apply the grayscale filter to (e.g., "example.com").
-3. Click "Add" to add the website to your list.
-4. Visit the website you added, and it should now appear in grayscale.
+## Privacy
 
+This extension:
+- Only processes data locally in your browser
+- Does not send any data to external servers
+- Stores website lists using Chrome's sync storage (syncs across your devices)
+- Stores timer state locally for session persistence
 
-   ![Grayscale Example](tutorial/grayscale-example.png)
+## Browser Compatibility
 
+- Chrome (Manifest V3)
+- Edge (Chromium-based)
+- Other Chromium-based browsers
 
-5. To remove a website from the list, click the "x" button next to it in the popup.
+## Contributing
 
-The extension consists of the following key files:
+Feel free to submit issues, feature requests, or pull requests to improve the extension!
 
-- `manifest.json`: The extension's configuration file.
-- `popup.html` and `popup.js`: The UI and logic for the extension's popup.
-- `content.js`: The script that runs on web pages to apply or remove the filter.
+## License
 
-To make changes:
-
-1. Modify the files as needed.
-2. Go to `chrome://extensions/` and click the refresh icon on the extension card to reload it.
-3. Test your changes.
-
-
-### Contributing
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with clear, descriptive messages.
-4. Push your changes to your fork.
-5. Submit a pull request to the main repository.
-
-## Troubleshooting
-
-If you encounter any issues:
-
-1. Make sure the extension is enabled in `chrome://extensions/`.
-2. Try removing and re-adding the website to your list.
-3. Refresh the page you're trying to apply the filter to.
-4. If problems persist, please open an issue on the GitHub repository with a detailed description of the problem.
-
-
-# Non-Commercial Use License
-
-Copyright (c) 2024 Azim Hamza
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, merge, publish, distribute, and/or sublicense copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-2. The Software may not be used for commercial purposes. "Commercial purposes" means any use of the Software intended for or directed toward commercial advantage or monetary compensation.
-
-3. Redistributions of the Software, in whole or in part, must not be sold for a profit.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT License - feel free to use and modify as needed.
